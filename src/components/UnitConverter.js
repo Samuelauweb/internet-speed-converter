@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const UnitConverter = ({ inputValue, handleInputChange }) => {
 
@@ -15,7 +16,8 @@ const UnitConverter = ({ inputValue, handleInputChange }) => {
         />
       </div>
       <span className='angle-icon fa-2x' style={{ marginTop: '30px' }}>
-        <i className='fas fa-angle-right'></i>
+        <FontAwesomeIcon icon={['fas', 'angle-right']} />
+        {/* <i className='fas fa-angle-right'></i> */}
       </span>
       <div className='text-right flex-1'>
         <div className='converter-title'>Show</div>
