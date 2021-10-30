@@ -1,27 +1,20 @@
 import { useState } from 'react'
+import UnitControl from './components/UnitControl'
+import CardFooter from './components/CardFooter'
 import './App.css'
 
 const App = () => {
-  const [ inputValue, setInputValue ] = useState(0)
+  const [inputValue, setInputValue] = useState(0)
 
   const handleInputChange = (e) => {
-    setInputValue(e.target.value, console.log(e.target.value))
+    setInputValue(e.target.value)
   }
 
   return (
     <div className='container'>
       <div className='card-header'>Network Speed Converter</div>
       <div className='card-body'>
-
-        {/* unit-control */}
-        <div className='unit-control'>
-          <div className='unit'>Mbps</div>
-          <span className='exchange-icon fa-fw fa-stack'>
-            <i className='far fa-circle fa-stack-2x'></i>
-            <i className='fas fa-exchange-alt fa-stack-1x'></i>
-          </span>
-          <div className='unit'>MB/s</div>
-        </div>
+        <UnitControl />
 
         {/* converter */}
         <div className='converter'>
@@ -49,7 +42,7 @@ const App = () => {
           </div>
         </div>
       </div>
-      <div className='card-footer'>FAST</div>
+      <CardFooter />
     </div>
   )
 }
